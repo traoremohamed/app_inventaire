@@ -170,7 +170,9 @@ class InventaireView extends StatelessWidget {
   Widget buildInventaireAction(){
     return GestureDetector(
       onTap: () {
-        invConst.inventaire();
+        debugPrint("On tap Gesture Detector ------");
+        Get.offAndToNamed(Routes.PRODUITINVENTORIE);
+       // invConst.inventaire();
         //vehConst.creationvehicule();
        // Get.toNamed(Routes.PRODUITINVENTORIE);
       },

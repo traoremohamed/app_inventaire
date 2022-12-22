@@ -25,6 +25,11 @@ class Inventaire {
 
   Inventaire.empty();
 
+  Inventaire.test({
+    required this.numInventaire,
+    required this.codeInventaire,
+});
+
   late int numInventaire;
   late String codeInventaire;
   late DateTime dateInventaire;

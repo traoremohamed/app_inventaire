@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+//import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:inventaire/models/inventaire.dart';
@@ -18,7 +18,9 @@ class ProduitInventorieController extends GetxController {
   String _scanBarcode = 'Unknown';
   //var currentusers = Users.empty().obs;
 
-  var currentInventaire = Inventaire.empty().obs;
+ // var currentInventaire = Inventaire.empty().obs;
+  var currentInventaire = Inventaire.test(numInventaire: 1, codeInventaire: "1000XF").obs;
+
 
   var statusCodeInventaire = 0.obs;
   var isClickOnProduitInv = false.obs;
@@ -35,17 +37,11 @@ class ProduitInventorieController extends GetxController {
 
   loadData() {
     //currentusers(UserManagement.readUser());
-    currentInventaire(InventaireManagement.readInventaire());
+   // currentInventaire(InventaireManagement.readInventaire());
   }
 
 
-  /*@override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // Step 2 <- SEE HERE
-    tecQte.text = 'Complete the story from here...';
-  }*/
+
 
   DateTime now = DateTime.now();
 
